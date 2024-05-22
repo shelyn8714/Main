@@ -2,243 +2,122 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    
 }
-html{
-    scroll-behavior: smooth;
-}
-
-/* Navbar */
-.navbar{
+body{
+    min-height: 100vh;
     display: flex;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    background-color: black;
-    position: sticky;
-    top: 0;
+    padding: 20px;  
+    background-image: url(slcv.jpg);
     
 }
-.navbar ul{
-    display: flex;
-    list-style: none;
-    margin: 20px 0px;
+.container {
+    position: relative;
+    max-width: 700px;
+    width: 100%;
+    background: #ebe8e2;
+    padding: 25px;
+    border-radius: 8px;
+}
+.container header{ 
+    font-size: 1.5rem;
+    color: darkblue;
+    font-weight: 500;
+    text-align: center;
+}
+.container .form{
+    margin-top: 30px;
+    text-align: left;
 
-
 }
-.navbar ul li{
-    font-family: century;
-    font-size: 1.1rem;
-    font-weight: bold;
-}
-.navbar ul li a{
-    text-decoration: none;
-    color: pink;
-    padding: 8px 25px;
-    transition: all .5 ease;
-}
-.navbar ul li a:hover{
-    background-color: black;
-    color: pink;
-    box-shadow: 0 0 10px pink;
-}
-.font{
-    font-family: impact;
-}
-
-/*Home Selection*/
-#home{
-        display: flex;
-        flex-direction: column;
-        height: 550px;
-        justify-content: center;
-        align-items: center;
-        color: pink; 
-        font-size: 47px;
-        -webkit-text-stroke: .5px black;
-        text-shadow: 0px 2px 4px black;
-        margin-bottom: 20px;
-}
-#home::before{
-        content: "";
-        position: absolute;
-        top: 100;  
-        right: 100;
-        background: url(img/technology.gif) no-repeat center center/cover;
-        height: 100vh;
-        width: 100%; 
-        z-index: -1;
-        opacity: 100;
-    }
-    .main{
-        display: flex;
-        flex-direction: column;
-        /* border: 1px solid white; */
-        align-items: center;
-        position: static; 
-        top: 30%;
-        right: 10%;
-    }
-    .headings{
-        font-family: impact;
-        font-size: 3rem;
-        text-align: center;
-        margin: 40px 35px;
-      
-
-    }
-    .btn{
-        padding: 10px 35px;
-        background-color: transparent;
-        border: 1px pink;
-        color: pink;
-        outline: none;
-        transition: .6s ease;
-    }
-    .btn:hover{
-        cursor: pointer;
-        background-color:black;
-        color: pink;
-        box-shadow: 0 0 5px pink, 0 0 10px pink, 0 0 15px pink;
-        font-weight: bold;
-    }
-
-     /* Basic Info. Section */
-     #basic{
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 20px;
-        margin-top: 50px;
-        margin-bottom: 20px;
-        background: url(img/girl.gif) no-repeat center center/cover;
-        color: pink;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: pink; 
-        -webkit-text-stroke: .5px black;
-        text-shadow: 0px 2px 4px black;
-        font-size: x-large;
-        margin-bottom: 20px;
-}
-        
+.form .input-box{
+    width: 100%;
+    margin-top: 20px;
     
-    #pic{
-        display: inside;
-    }
-    #pic img{
-        width: 300px; 
-        height: 300px;
-    }
-#intro{
-    display:flex;
-    flex-direction: column;
-    text-align: center;
-    padding: 10px;
-    font-family: impact;
 }
-#intro h2{
-    font-size: 2rem; 
-    margin-bottom: 20px;
- }
- 
-/* My Hobbies Section */
-#hobbies{
+.input-box label{
+    color: darkblue;
+}
+.form :where(.input-box input, .select-box) {
+    height: 50px;
+    width: 100%;
+    outline: none;
+    font-size: 1rem;
+    color: darkblue;
+    border: 1px solid green;
+    border-radius: 15px;
+    padding: 0 15px;
+}
+.input-box input:focus{
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0, 1);
+}
+.form .column{
+    column-gap: 15px;
+}
+.form .gender-box{
+    margin-top: 20px
+}
+.gender-box h3{
+    color: darkblue;
+    font-size: 150;
+    font-weight: 400;
+    margin-bottom: 8px;
+}
+.form :where(.gender-option, .gender) {
     display: flex;
-    flex-direction: column;
-    background: url(img/pixel.gif) no-repeat center center/cover;
-    color: pink;
     align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: impact;
-    color: pink; 
-    -webkit-text-stroke: .5px black;
-    text-shadow: 0px 2px 4px black;
-    font-size: x-large;
-    margin-bottom: 20px;
-}
-
-.gallery{
-    display: flex;
+    column-gap: 50px;
     flex-wrap: wrap;
-    justify-content: space-around;
 }
-.gallery img{
-    width: 360px;
-    height: 240px;
-    margin: 10px;
+.form .gender {
+    column-gap: 5px;
+}
+.gender input{
+    accent-color:darkblue;
+}
+.form :where(.gender input, .gender label){
+    cursor: pointer;
+} 
+.gender label{
+    color:darkblue;
+}
+.addres :where(input, .select-box) {
+    margin-top: 15px;
+}
+.select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: none;
+    font-size: 1rem;
+}
+.form button {
+    height: 55px ;
+    width: 100%;
+    color: yellow;
+    font-size: 1rem;
+    border: none;
+    margin-top: 30px;
+    cursor: pointer;
+    border-radius: 6px;
+    font-weight: 400;
+    transition: all 0.2s ease;
+    background-color:darkblue;
+}
+.form button:hover {
+    background-color: green;
 }
 
-/* Favorites Section */
-#favorites{
-    display: flex;
-    flex-direction: column;
-    background: url(img/fly.gif) no-repeat center center/cover;
-    color: pink;
-    align-items: center;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: impact;
-    color: pink; 
-    -webkit-text-stroke: .5px black;
-    text-shadow: 0px 2px 4px black;
-    font-size: x-large;
-    margin-bottom: 20px;
-
-}
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-}
-.gallery img{
-    width: 240px;
-    height: 240px;
-    margin: 0px;
-}
-/* Trivia's Section */
-#trivia{
-    display: flex;
-    flex-direction: column;
-    background: url(img/ohayo.gif) no-repeat center center/cover;
-    color: pink;
-    align-items: center;
-    padding: 50px;
-    margin-bottom: 50px;
-    text-align: center;
-    font-family: impact;
-    color: pink; 
-    -webkit-text-stroke: .5px black;
-    text-shadow: 0px 2px 4px black;
-    font-size: x-large;
-    margin-bottom: 20px;
-}
-.image img{
-    width: 240px;
-    height: 240px;
-    margin: 0px;
-}
-/* Fact's Section */
-#fact{
-    display: flex;
-    flex-direction: column;
-    background: url(img/beer.gif) no-repeat center center/cover;
-    color: pink;
-    align-items: left;
-    padding: 20px;
-    margin-bottom: 20px;
-    text-align: center;
-    font-family: impact;
-    color: pink; 
-    -webkit-text-stroke: .5px black;
-    text-shadow: 0px 2px 4px black;
-    font-size: x-large;
-    margin-bottom: 20px;
-}
-.picture img{
-    width: 240px;
-    height: 240px;
-    margin: 0px;
+/* Responsive */
+@media screen and (max-width: 500px) {
+    .form .column { 
+        flex-wrap: wrap;
+    }
+     
+    .form :where(.gender-option, .gender) {
+        row-gap: 15px;
+    }
 }
